@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+menu > ul {
+    display: none;
+}
+
+article::after {
+    content: 'Esse article foi feito por Alexandre Akyra Camargo';
+}
+
