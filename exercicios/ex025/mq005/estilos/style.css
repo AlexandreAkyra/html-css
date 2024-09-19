@@ -23,18 +23,68 @@ header > h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-header > ul > li {
-    display: inline-block;
-    padding: 10px;
-    background-color: rgb(43, 43, 43);
-    color: white;
-    border-radius: 5px;
+/* Versão Mobile First */
+@media screen and (max-width: 992px) {
+    header > nav > ul > li {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(88, 88, 88);
+        border: 1px solid black;
+        margin-top: 1px;
+    }   
+    
+    header > nav {
+        display: none;
+    }
+    
+    header > nav > ul > li:hover {
+        background-color: gray;
+        transition: 0.3s;
+    }
+    
+    header > nav > ul > li > a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #burguer {
+        display: block;
+        text-align: center;
+        padding: 7px;
+        background-color: rgb(88, 88, 88);
+        border: 1px solid black;
+        margin-top: 1px;
+        cursor: pointer;
+    }
+    
 }
 
-header > ul > li:hover {       
-    background-color: rgb(99, 99, 99);
-    transition: 0.3s;
+/* Versão Grandes telas */
+
+@media screen and (min-width: 992px) {
+    header > nav > ul > li {
+        display: inline-block;
+        padding: 10px;
+        background-color: rgb(43, 43, 43);
+        color: white;
+        border-radius: 5px;
+    }
+    
+    header > nav > ul > li:hover {       
+        background-color: rgb(99, 99, 99);
+        transition: 0.3s;
+    }
+    
+    header > nav > ul > li > a {
+        text-decoration: none;
+        color: white;
+    }
+    #burguer {
+        display: none;
+    }
 }
+
 
 main > section {
     background-color: rgb(255, 255, 255);
@@ -49,4 +99,5 @@ p {
     margin: 20px 10px 10px 20px;
     text-indent: 30px;
     line-height: 1.5em;
+    text-align: justify;
 }
